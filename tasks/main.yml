@@ -1,0 +1,11 @@
+---
+# tasks file for postgresql
+- name: check postgresql is installed
+  ansible.builtin.command: postgresql --version
+  ignore_errors: yes
+
+- name: Install postgresql
+  apt: 
+    name: postgresql
+    state: present
+  

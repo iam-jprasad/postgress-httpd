@@ -1,0 +1,11 @@
+---
+- hosts: app
+  become: true
+  roles:
+    - postgresql
+    
+- hosts: db
+  become: true
+  roles:
+    - apache
+
